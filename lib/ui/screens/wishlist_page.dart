@@ -19,6 +19,8 @@ class WishlistPage extends StatelessWidget {
               itemCount: wishlist.length,
               itemBuilder: (context, index) {
                 final movie = wishlist[index];
+                final cubit = context.read<WishlistCubit>();
+
                 return ListTile(
                   leading: Image.network(
                     'https://image.tmdb.org/t/p/w200${movie.posterPath}',
@@ -27,6 +29,15 @@ class WishlistPage extends StatelessWidget {
                   ),
                   title: Text(movie.title),
                   subtitle: Text('⭐ ${movie.voteAverage}'),
+                  trailing: IconButton(
+                    icon: const Icon(
+                      Icons.favorite,
+                      color: Colors.red,
+                    ),
+                    onPressed: () {
+                      cubit.toggleWishlist(movie); // يحذف الفيلم من الفيفورت
+                    },
+                  ),
                   onTap: () {
                     Navigator.push(
                       context,
