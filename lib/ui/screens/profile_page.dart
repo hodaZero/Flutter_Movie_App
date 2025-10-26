@@ -7,6 +7,8 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textColor = Theme.of(context).colorScheme.onBackground;
+
     return Scaffold(
       appBar: AppBar(title: const Text("Profile")),
       body: Padding(
@@ -41,16 +43,16 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 8),
-                    const Text(
+                    Text(
                       "Hoda Shaarawy",
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
+                        color: textColor,
                       ),
                     ),
                   ],
                 ),
-
                 const SizedBox(width: 40),
                 Column(
                   children: [
@@ -76,11 +78,12 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 8),
-                    const Text(
+                    Text(
                       "Amal Salah",
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
+                        color: textColor,
                       ),
                     ),
                   ],
@@ -88,32 +91,30 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 40),
-
-            const Text(
+            Text(
               "Best Team ❤️",
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
-                color: Colors.black87,
+                color: textColor,
               ),
             ),
             const SizedBox(height: 20),
-
-            const Text(
+            Text(
               "About This App",
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                color: Colors.black54,
+                color: textColor,
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
+            Text(
               "This is a Flutter movies app demo using Bloc, Dio, and Shared Preferences.",
               textAlign: TextAlign.center,
+              style: TextStyle(color: textColor),
             ),
             const SizedBox(height: 20),
-
             ElevatedButton.icon(
               icon: const Icon(Icons.delete),
               label: const Text("Clear Wishlist"),
