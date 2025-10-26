@@ -14,9 +14,8 @@ class MovieListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Now Playing Movies"),
+        title: const Text("Movies"),
         actions: [
-          // ✅ BlocBuilder يخلي لون الأيقونة يتغير حسب حالة الـ Wishlist
           BlocBuilder<WishlistCubit, List<Movie>>(
             builder: (context, wishlist) {
               final hasFavorites = wishlist.isNotEmpty;

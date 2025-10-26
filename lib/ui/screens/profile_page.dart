@@ -35,8 +35,8 @@ class ProfilePage extends StatelessWidget {
                       child: ClipOval(
                         child: Image.asset(
                           'images/huda.jpg',
-                          width: 110,
-                          height: 110,
+                          width: 140,
+                          height: 140,
                           fit: BoxFit.cover,
                           alignment: Alignment.topCenter,
                         ),
@@ -70,8 +70,8 @@ class ProfilePage extends StatelessWidget {
                       child: ClipOval(
                         child: Image.asset(
                           'images/amal.jpg',
-                          width: 110,
-                          height: 110,
+                          width: 140,
+                          height: 140,
                           fit: BoxFit.cover,
                           alignment: Alignment.topCenter,
                         ),
@@ -92,7 +92,7 @@ class ProfilePage extends StatelessWidget {
             ),
             const SizedBox(height: 40),
             Text(
-              "Best Team ❤️",
+              "❤️ Best Team ❤️",
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
@@ -110,8 +110,7 @@ class ProfilePage extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Text(
-              "This is a Flutter movies app demo using Bloc, Dio, and Shared Preferences.",
-              textAlign: TextAlign.center,
+                "An interactive Flutter app that showcases popular and trending movies." ,
               style: TextStyle(color: textColor),
             ),
             const SizedBox(height: 20),
