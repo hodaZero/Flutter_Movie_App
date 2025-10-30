@@ -12,7 +12,7 @@ class MovieCubit extends Cubit<MovieState> {
       final movies = await repo.fetchNowPlaying();
       emit(MovieLoaded(movies));
     } catch (e) {
-      emit(MovieError('فشل تحميل الأفلام'));
+      emit(MovieError('Failed to fetch now playing movies'));
     }
   }
 }

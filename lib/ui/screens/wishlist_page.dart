@@ -35,7 +35,7 @@ class WishlistPage extends StatelessWidget {
                       color: Colors.red,
                     ),
                     onPressed: () {
-                      cubit.toggleWishlist(movie); // يحذف الفيلم من الفيفورت
+                      cubit.toggleWishlist(movie); // delete from wishlist
                     },
                   ),
                   onTap: () {
@@ -46,7 +46,7 @@ class WishlistPage extends StatelessWidget {
                       ),
                     );
                   },
-                );
+                ); 
               },
             ),
     );
